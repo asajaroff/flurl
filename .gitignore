@@ -1,5 +1,19 @@
 # Packages
 **__pycache__**
+__pycache__/
 
 # venvs
 **.venv**
+.venv/
+
+*.pyc
+
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/

@@ -8,11 +8,19 @@ build:
 dev:
 	python3 -m flask --app $(APP_NAME) \
 		run \
-		--host=0.0.0.0 \
+		--debug \
+		--host 0.0.0.0 \
 		--port 9090 \
-		--debugger \
 		--reload \
+		--debugger \
 		--with-threads
+
+db: init-db
+
+init-db:
+	python3 -m flask --app $(APP_NAME) \
+		init-db
+
 
 generate-dependencies:
 	python3 -m pip freeze > requirements.txt
